@@ -91,8 +91,6 @@ height:auto;
 
 /*End of Skip Links */
 
-/* Hamburger Menu */
-
 #menu-toggle {
     display: block;
     position: relative;
@@ -117,8 +115,6 @@ height:auto;
     color: #4f7794;
   }
   
-  
-  /* The hamburger button hidden inside an input element */
   #menu-toggle input {
     display: block;
     width: 30px;
@@ -128,8 +124,8 @@ height:auto;
     left: -5px;  
     padding: 0;
     cursor: pointer;  
-    opacity: 0; /* hide this */
-    z-index: 2; /* and place it over the hamburger */  
+    opacity: 0;
+    z-index: 2; 
     -webkit-touch-callout: none;
   }
   
@@ -143,9 +139,6 @@ height:auto;
     display: none;
   }
   
-  /*
-   * Hamburger
-   */
   #menu-toggle label div {
     display: block;
     width: 30px;
@@ -175,23 +168,16 @@ height:auto;
             transform-origin: 0% 0%;
   }
   
-  /* 
-   * Change the color of the hamburger when toggled
-   */
   #menu-toggle input:checked + label div {
     background: #232323;
   }
   
-  /*
-   * Use absolute positioning to place the menu off-screen
-   */
   ul {
     position: absolute;
     width: 300px;
     margin: -100px 0 -100px -50px;
     background: #55BCD5;
     list-style-type: none;
-    /* Hide the menu off-screen to the left */
     top: -125px;
     right: -110%;
     -webkit-transition: right 0.3s ease;
@@ -211,9 +197,6 @@ height:auto;
     font-weight: bold;
   }
   
-  /*
-   * Slide the menu in from left when the input is checked
-   */
   #menu-toggle input:checked ~ ul {
     right: 0;
   }
@@ -229,7 +212,7 @@ height:auto;
 
 h1 {
   font-size: 3.5em;
-  text-align: center;
+  margin-left: 12%;
 }
 
 .sr-only {
@@ -254,7 +237,7 @@ h1 {
 
   #intro h2 {
     font-size: 3em;
-    margin-left: 60px;
+    margin-left: 12%;
   }
   #intro p {
     margin-left: 60px;
@@ -293,7 +276,7 @@ h1 {
   h4 {
     font-weight: bold;
     padding: 10px;
-    font-size: 2em;
+    font-size: 1.5em;
     text-align: center;
     text-transform: uppercase;
   }
@@ -346,7 +329,7 @@ h1 {
 
   #about section {
     display: inline-block;
-    margin-left: 10%;
+    margin-left: 5%;
     padding-bottom: 10%;
   }
 
@@ -357,13 +340,18 @@ h1 {
   
   #about img {
     display: block;
-    width: 65%;
+    width: 50%;
+    margin-left: 25%;
   }
 
   #contact {
     display: block;
     padding-top: 10%;
     margin: 0 10% 0 10%;
+  }
+
+  #contact h3 {
+    margin: 0;
   }
 
   .form-required {
@@ -378,11 +366,16 @@ h1 {
     font-family: inherit;
     width: 90%;
     background-color: #fff;
-    border: 2px solid #9B26B0;
+    border: 3px solid #9B26B0;
     margin-bottom: 10%;
     padding-left: 5%;
     padding-top: 5%;
     padding-bottom: 5%;
+  }
+
+  input::placeholder {
+    font-weight: bold;
+    color: #000000;
   }
 
   input:not(textarea) {
@@ -402,6 +395,7 @@ h1 {
 
   legend {
     font-weight: bold;
+    font-size: 1.5em;
   }
 
   input[type="radio"] {
@@ -447,9 +441,7 @@ h1 {
   }
 
   select {
-    // A reset of styles, including removing the default dropdown arrow
     appearance: none;
-    // Additional resets for further consistency
     background-color: transparent;
     border: none;
     padding: 0 1em 0 0;
@@ -462,7 +454,7 @@ h1 {
   }
 
   .custom-select {
-    width: 100%;
+    width: 90%;
     min-width: 15ch;
     max-width: 30ch;
     border: 0.15em solid #9B26B0;
@@ -476,3 +468,160 @@ h1 {
     margin-bottom: 1em;
   }
 
+#contact p {
+  text-align: right;
+}
+
+#mySubmit {
+  color: #FFFFFF;
+  width: 97%;
+  background-color: #9B26B0;
+  padding-bottom: 10%;
+  font-weight: bold;
+}
+
+footer {
+  padding: 10%;
+  background-color: #EAEAEA;
+  font-size: 1em;
+}
+
+footer p {
+  text-align: center;
+  padding-bottom: 10%;
+}
+
+footer a {
+ text-decoration: none;
+ text-align: center;
+ color: #000000;
+ font-size: 1.5em;
+ display: block;
+ margin-bottom: 5%;
+}
+
+@media screen and (min-width: 768px) {
+
+ul {
+  position: absolute;
+  display: inline-block;
+  left: 0;
+  list-style: none;
+  width: 50%;
+  margin-left: 1%;
+  padding-right: 0%;
+  background-color: #FFFFFF00;
+  list-style: none;
+}
+ul li {
+  padding-right: 5%;
+  padding-top: 2%;
+  padding-left: 5%;
+  padding-bottom: 2%;
+  background-color: #FFFFFF;
+  display: inline-block;
+  margin-top: 35%;
+  margin-right: 90%;
+}
+
+
+li a {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+header {
+  padding-bottom: 15%;
+}
+
+header h1 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 20%;
+  margin-top: 2%;
+}
+
+header p {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 9%;
+}
+
+h2 {
+  margin:0;
+  padding: 0;
+}
+
+#intro img {
+  width: 40%;
+  display: inline-block;
+  margin-left: 9%;
+}
+
+#intro img:last-child {
+  width: 100%;
+}
+
+#plan section {
+  display: inline-block;
+  width: 32%;
+}
+
+#testimonials section {
+  display: inline-block;
+  width: 45%;
+}
+
+input[type="radio"] {
+  display: inline-block;
+  padding: 5%;
+}
+
+legend {
+  padding-bottom: 5%;
+}
+
+fieldset {
+  padding-bottom: 5%;
+}
+
+.custom-select {
+  padding-right: 46%;
+  margin-bottom: 5%;
+}
+
+#mySubmit {
+  width: 35%;
+  text-align: center;
+  margin-left: 67%;
+  padding: 5% 10% 5% 10%;
+}
+
+footer {
+  padding: 0;
+  margin: 0 auto;
+  display: inline-block;
+  width: 100%;
+}
+
+footer p {
+  padding-bottom: 0;
+  display: inline-block;
+  font-size: 1em;
+  margin-top: 5%;
+  margin-left: 15%;
+  padding-right: 3%;
+}
+
+footer a {
+  display: inline-block;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1em;
+  padding-right: 3%;
+}
+
+}
