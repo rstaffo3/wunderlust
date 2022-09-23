@@ -1,0 +1,773 @@
+/* Roy Stafford */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* End of Reset Code */
+
+/* Fonts */
+
+h1, h2, h3 {
+    font-family: 'Molle', cursive;
+}
+
+h4, p, q, small, nav, button, form {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* End of Fonts */
+
+:root {
+  --input-border: #8b8a8b;
+  --input-focus-h: 245;
+  --input-focus-s: 100%;
+  --input-focus-l: 42%;
+}
+
+/* Skip Links */
+
+#skip
+{
+position:absolute;
+left:-10000px;
+top:auto;
+width:1px;
+height:1px;
+overflow:hidden;
+}
+ 
+#skip:focus
+{
+position:static;
+width:auto;
+height:auto;
+}
+
+/*End of Skip Links */
+
+#menu-toggle {
+    display: block;
+    position: relative;
+    top: 50px;
+    left: 50px;  
+    z-index: 1;  
+    -webkit-user-select: none;
+    -moz-user-select: none;
+     -ms-user-select: none;
+         user-select: none;
+  }
+  
+  #menu-toggle a {
+    text-decoration: none;
+    color: #232323;
+    -webkit-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
+    transition: color 0.3s ease;
+  }
+  
+  #menu-toggle a:hover {
+    color: #4f7794;
+  }
+  
+  #menu-toggle input {
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: -7px;
+    left: -5px;  
+    padding: 0;
+    cursor: pointer;  
+    opacity: 0;
+    z-index: 2; 
+    -webkit-touch-callout: none;
+  }
+  
+  #menu-toggle label {
+    position: relative;
+    display: block;
+    width: 30px;
+    height: 30px;
+  }
+  #menu-toggle label span {
+    display: none;
+  }
+  
+  #menu-toggle label div {
+    display: block;
+    width: 30px;
+    height: 2px;
+    margin-bottom: 6px;
+    position: relative;
+    background: #000000;
+    border-radius: 3px;  
+    z-index: 1;  
+    -webkit-transform-origin: 4px 0px;  
+        -ms-transform-origin: 4px 0px;  
+            transform-origin: 4px 0px;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  
+  #menu-toggle label div:first-child {
+    -webkit-transform-origin: 0% 100%;
+        -ms-transform-origin: 0% 100%;
+            transform-origin: 0% 100%;
+  }
+  
+  #menu-toggle label div:nth-child(2) {
+      -webkit-transform-origin: 0% 0%;
+        -ms-transform-origin: 0% 0%;
+            transform-origin: 0% 0%;
+  }
+  
+  #menu-toggle input:checked + label div {
+    background: #232323;
+  }
+  
+  ul {
+    position: absolute;
+    width: 300px;
+    margin: -100px 0 -100px -50px;
+    background: #55BCD5;
+    list-style-type: none;
+    top: -125px;
+    right: -110%;
+    -webkit-transition: right 0.3s ease;
+    -o-transition: right 0.3s ease;
+    transition: right 0.3s ease; 
+    padding-left: 235px;
+  }
+  
+  ul li {
+    font-size: 22px;
+    border: 1px solid black;
+    margin-left: -235px;
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-weight: bold;
+  }
+  
+  #menu-toggle input:checked ~ ul {
+    right: 0;
+  }
+
+  #menu-toggle label {
+    background-color: #F6D64A;
+    padding: 10px 90px 0px 80px;
+    position: absolute;
+    top: -270px;
+    right: 60px;
+    font-weight: bold;
+  }
+
+h1 {
+  font-size: 3.5em;
+  margin-left: 12%;
+}
+
+.sr-only {
+  position:absolute;
+  left:-10000px;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+  }
+
+  header {
+    background-image: linear-gradient(#499BD2, white);
+  }
+
+  header p {
+    padding-left: 60px;
+    padding-right: 60px;
+    margin-bottom: 30px;
+    line-height: 2;
+  }
+
+  #intro h2 {
+    font-size: 3em;
+    margin-left: 12%;
+  }
+  #intro p {
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-bottom: 20px;
+    line-height: 2;
+  }
+
+  #intro img {
+    width: 100%;
+    padding-bottom: 20px;
+  }
+
+  #plan {
+    background-color: #F6D64A;
+    padding-top: 20px;
+    padding-bottom: 5px;
+  }
+
+  h3 {
+    font-size: 3em;
+    margin-left: 10%;
+    padding-bottom: 5%;
+  }
+
+  #plan section {
+    margin-bottom: 50px;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #55BCD5;
+    width: 70%;
+    margin-left: 10%;
+  }
+
+  h4 {
+    font-weight: bold;
+    padding: 10px;
+    font-size: 1.5em;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  #plan img {
+    margin-left: 20%;
+  }
+
+  #testimonials {
+    padding-top: 10%;
+  }
+
+  #testimonials img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  #testimonials p {
+    text-align: center;
+    padding-left: 20px;
+  }
+
+  #testimonials q {
+    display: block;
+    margin: 0 auto;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    font-style: italic;
+    text-align: center;
+  }
+  
+  #testimonials q::before {
+    content: open-quote;
+  }
+
+  #testimonials q::after {
+    content: open-quote;
+  }
+
+  #testimonials q {
+    quotes: "“" "”"; 
+  }
+
+  #about {
+    background-color: #499BD2;
+    padding-top: 2em;
+  }
+
+  #about section {
+    display: inline-block;
+    margin-left: 5%;
+    padding-bottom: 10%;
+  }
+
+  #about p {
+    font-size: 1.5em;
+    text-align: center;
+  }
+  
+  #about img {
+    display: block;
+    width: 50%;
+    margin-left: 25%;
+  }
+
+  #contact {
+    display: block;
+    padding-top: 10%;
+    margin: 0 10% 0 10%;
+  }
+
+  #contact h3 {
+    margin: 0;
+  }
+
+  .form-required {
+    font-family:  'Montserrat', sans-serif;
+    font-style: italic;
+    font-size: 0.5em;
+  }
+
+  input {
+    font-size: 16px;
+    font-size: max(16px, 1em);
+    font-family: inherit;
+    width: 90%;
+    background-color: #fff;
+    border: 3px solid #9B26B0;
+    margin-bottom: 10%;
+    padding-left: 5%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+
+  input::placeholder {
+    font-weight: bold;
+    color: #000000;
+  }
+
+  input:not(textarea) {
+    line-height: 1;
+    height: 2.25rem;
+  }
+  
+  .required {
+    color: #9B26B0;
+  }
+
+  label {
+    font-size: 1.125rem;
+    font-weight: bold;
+    line-height: 1;
+  }
+
+  legend {
+    font-weight: bold;
+    font-size: 1.5em;
+  }
+
+  input[type="radio"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #FFFFFF;
+    margin: 0;
+    font: inherit;
+    color: currentColor;
+    width: 1.15em;
+    height: 1.15em;
+    border: 0.15em solid currentColor;
+    border-radius: 50%;
+    transform: translateY(-0.075em);
+  
+    display: grid;
+    place-content: center;
+  }
+  
+  input[type="radio"]::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em #9B26B0;
+    /* Windows High Contrast Mode */
+    background-color: CanvasText;
+  }
+  
+  input[type="radio"]:checked::before {
+    transform: scale(1);
+  }
+  
+  input[type="radio"]:focus {
+    outline: max(2px, 0.15em) solid currentColor;
+    outline-offset: max(2px, 0.15em);
+  }
+
+  label {
+    text-transform: uppercase;
+  }
+
+  select {
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    padding: 0 1em 0 0;
+    margin: 0;
+    width: 100%;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: inherit;
+    line-height: inherit;
+  }
+
+  .custom-select {
+    width: 90%;
+    min-width: 15ch;
+    max-width: 30ch;
+    border: 0.15em solid #9B26B0;
+    padding: 0.25em 0.5em;
+    font-size: 1.25rem;
+    cursor: pointer;
+    line-height: 1.1;
+    background-color: #fff;
+    background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+  }
+
+#contact p {
+  text-align: right;
+}
+
+#mySubmit {
+  color: #FFFFFF;
+  width: 97%;
+  background-color: #9B26B0;
+  padding-bottom: 10%;
+  font-weight: bold;
+}
+
+footer {
+  padding: 10%;
+  background-color: #EAEAEA;
+  font-size: 1em;
+}
+
+footer p {
+  text-align: center;
+  padding-bottom: 10%;
+}
+
+footer a {
+ text-decoration: none;
+ text-align: center;
+ color: #000000;
+ font-size: 1.5em;
+ display: block;
+ margin-bottom: 5%;
+}
+
+@media screen and (min-width: 768px) {
+
+ul {
+  position: absolute;
+  display: inline-block;
+  left: 0;
+  list-style: none;
+  width: 50%;
+  margin-left: 1%;
+  padding-right: 0%;
+  background-color: #FFFFFF00;
+  list-style: none;
+}
+ul li {
+  padding-right: 5%;
+  padding-top: 2%;
+  padding-left: 5%;
+  padding-bottom: 2%;
+  background-color: #FFFFFF;
+  display: inline-block;
+  margin-top: 35%;
+  margin-right: 90%;
+}
+
+
+li a {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+header {
+  padding-bottom: 15%;
+}
+
+header h1 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 20%;
+  margin-top: 2%;
+}
+
+header p {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 9%;
+}
+
+h2 {
+  margin:0;
+  padding: 0;
+}
+
+#intro img {
+  width: 40%;
+  display: inline-block;
+  margin-left: 9%;
+}
+
+#intro img:last-child {
+  width: 100%;
+}
+
+#plan section {
+  display: inline-block;
+  width: 32%;
+}
+
+#testimonials section {
+  display: inline-block;
+  width: 45%;
+}
+
+input[type="radio"] {
+  display: inline-block;
+  padding: 5%;
+}
+
+legend {
+  padding-bottom: 5%;
+}
+
+fieldset {
+  padding-bottom: 5%;
+}
+
+.custom-select {
+  padding-right: 46%;
+  margin-bottom: 5%;
+}
+
+#mySubmit {
+  width: 35%;
+  text-align: center;
+  margin-left: 67%;
+  padding: 5% 10% 5% 10%;
+}
+
+footer {
+  padding: 0;
+  margin: 0 auto;
+  display: inline-block;
+  width: 100%;
+}
+
+footer p {
+  padding-bottom: 0;
+  display: inline-block;
+  font-size: 1em;
+  margin-top: 5%;
+  margin-left: 15%;
+  padding-right: 3%;
+}
+
+footer a {
+  display: inline-block;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1em;
+  padding-right: 3%;
+}
+
+#about section:first-child {
+  margin-left: 5%;
+}
+#about section {
+  margin-left: 0;
+}
+}
+
+@media screen and (min-width: 1024px) {
+
+header h1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 14%;
+}
+
+header p {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  margin-top: 5%;
+  margin-left: 10%;
+}
+
+header {
+  padding-bottom: 5%;
+}
+
+ul {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  display: block;
+  height: 200px;
+  width: 75%;
+  margin-left: 47%;
+  margin-top: -9.5%;
+}
+
+ul li {
+  margin: 0;
+  padding: 1%;
+  width: 180px;
+  text-align: center;
+  height: 20px;
+}
+
+ul li:hover {
+  background-color: #F6D64A;
+}
+
+#intro {
+  display: block;
+  margin: auto;
+}
+
+#intro h2 {
+  margin-top: 5%;
+  width: 20%;
+}
+
+#intro p {
+  width: 33%;
+  margin: 0;
+  margin-left: 12%;
+  display: inline-block;
+  position: absolute;
+}
+
+#intro img {
+  width: 40%;
+  display: inline-block;
+  
+}
+
+#img-grid {
+  width: 50%;
+  display: inline-block;
+  margin-left: 45%;
+}
+
+#plan section {
+  display: inline-block;
+  width: 20%;
+  margin: 0;
+  padding: 0;
+  margin-left: 2%;
+  margin-bottom: 5%;
+}
+
+#plan section:first-child {
+  margin-left: 5%;
+}
+
+#plan img {
+  justify-content: center;
+}
+
+#plan h3 {
+  margin-top: 5%;
+}
+
+#testimonials section {
+  width: 15%;
+  margin-left: 5%;
+}
+
+#testimonials section:first-child {
+  margin-left: 10%;
+}
+
+#about section {
+  width: 20%;
+}
+
+#about img {
+  width: 30%;
+  margin: 0 auto;
+}
+
+footer {
+  height: 50px;
+  margin: 0;
+  padding: 0;
+}
+
+footer a {
+  margin: 0;
+  padding: 0;
+  margin-left: 35%;
+}
+
+footer a:last-child {
+  margin-left: 10%;
+}
+
+footer p {
+  margin-top: 20px;
+  margin-left: 5%;
+}
+
+
+}
