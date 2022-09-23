@@ -624,4 +624,149 @@ footer a {
   padding-right: 3%;
 }
 
+#about section:first-child {
+  margin-left: 5%;
+}
+#about section {
+  margin-left: 0;
+}
+}
+
+@media screen and (min-width: 1024px) {
+
+header h1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 14%;
+}
+
+header p {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  margin-top: 5%;
+  margin-left: 10%;
+}
+
+header {
+  padding-bottom: 5%;
+}
+
+ul {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  display: block;
+  height: 200px;
+  width: 75%;
+  margin-left: 47%;
+  margin-top: -9.5%;
+}
+
+ul li {
+  margin: 0;
+  padding: 1%;
+  width: 180px;
+  text-align: center;
+  height: 20px;
+}
+
+ul li:hover {
+  background-color: #F6D64A;
+}
+
+#intro {
+  display: block;
+  margin: auto;
+}
+
+#intro h2 {
+  margin-top: 5%;
+  width: 20%;
+}
+
+#intro p {
+  width: 33%;
+  margin: 0;
+  margin-left: 12%;
+  display: inline-block;
+  position: absolute;
+}
+
+#intro img {
+  width: 40%;
+  display: inline-block;
+  
+}
+
+#img-grid {
+  width: 50%;
+  display: inline-block;
+  margin-left: 45%;
+}
+
+#plan section {
+  display: inline-block;
+  width: 20%;
+  margin: 0;
+  padding: 0;
+  margin-left: 2%;
+  margin-bottom: 5%;
+}
+
+#plan section:first-child {
+  margin-left: 5%;
+}
+
+#plan img {
+  justify-content: center;
+}
+
+#plan h3 {
+  margin-top: 5%;
+}
+
+#testimonials section {
+  width: 15%;
+  margin-left: 5%;
+}
+
+#testimonials section:first-child {
+  margin-left: 10%;
+}
+
+#about section {
+  width: 20%;
+}
+
+#about img {
+  width: 30%;
+  margin: 0 auto;
+}
+
+footer {
+  height: 50px;
+  margin: 0;
+  padding: 0;
+}
+
+footer a {
+  margin: 0;
+  padding: 0;
+  margin-left: 35%;
+}
+
+footer a:last-child {
+  margin-left: 10%;
+}
+
+footer p {
+  margin-top: 20px;
+  margin-left: 5%;
+}
+
 }
